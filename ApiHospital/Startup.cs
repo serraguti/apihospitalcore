@@ -35,10 +35,10 @@ namespace ApiHospital
             services.AddSwaggerGen(
                 options =>
                 {
-                    options.SwaggerDoc(name: "v1", new OpenApiInfo
+                    options.SwaggerDoc(name: "v2", new OpenApiInfo
                     {
                         Title = "Api Hospitales",
-                         Version = "v1", Description = "Api Hospitales Core 2021"
+                         Version = "2.0", Description = "Api Hospitales Core 2021"
                     });
                 });
             services.AddControllers();
@@ -55,7 +55,7 @@ namespace ApiHospital
                 options =>
                 {
                     options.SwaggerEndpoint(
-                        url: "/swagger/v1/swagger.json", name: "Api v1");
+                        url: "/swagger/v2/swagger.json", name: "Api v2");
                     options.RoutePrefix = "";
                 });
             app.UseHttpsRedirection();
